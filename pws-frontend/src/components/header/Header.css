@@ -1,0 +1,27 @@
+.header-wrapper {
+    height: fit-content;
+}
+
+.header-title {
+    height: fit-content;
+    font-size: 44px;
+    padding: 20px 0 20px 0;
+    align-content: center;
+    top: 0;
+    border-bottom: 1px solid white;
+}
+
+.header-navigation {
+    height: fit-content;
+    display: flex;
+    width: 100%;
+}
+
+.header-navigation-button {
+    padding: 10px;
+}
+
+.middle-button {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
