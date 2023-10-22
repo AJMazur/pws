@@ -18,9 +18,11 @@ public class EmailServiceRestController {
 
     @PostMapping("/sendEmail")
     public ResponseEntity<String> postEmail(EmailDto email) {
-        if (emailService.sendEmail(email)) {
+        try {
+            emailService.sendEmail(email);
             return ResponseEntity.ok("ok");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Unable to send an email");
         }
-        return ResponseEntity.badRequest().body("unable to send an email");
     }
 }

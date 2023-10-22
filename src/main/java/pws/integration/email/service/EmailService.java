@@ -4,5 +4,5 @@ import pws.integration.email.dto.EmailDto;
 
 public interface EmailService {
 
-    boolean sendEmail(EmailDto emailDto);
+    void sendEmail(EmailDto emailDto) throws Exception;
 }
