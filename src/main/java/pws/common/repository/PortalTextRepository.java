@@ -9,5 +9,5 @@ public interface PortalTextRepository extends MongoRepository<PortalText, String
     @Query("{key:'?0'}")
     PortalText findPortalTextByKey(String key);
 
-    public long count();
+    long count();
 }
