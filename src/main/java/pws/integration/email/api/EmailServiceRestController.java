@@ -22,7 +22,8 @@ public class EmailServiceRestController {
             emailService.sendEmail(email);
             return ResponseEntity.ok("ok");
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Unable to send an email");
+            return ResponseEntity.badRequest().body(
+                    String.format("Unable to send an email with exception: %s", e.getMessage()));
         }
     }
 }
