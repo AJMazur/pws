@@ -1,20 +1,31 @@
+.header {
+    background-color: #171717;
+}
+
 .header-wrapper {
     height: fit-content;
+    font-size: 30px;
+    display: flex;
+}
+
+.header-title-wrapper {
+    padding: 20px 0 20px 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .header-title {
-    height: fit-content;
-    font-size: 44px;
-    padding: 20px 0 20px 0;
-    align-content: center;
-    top: 0;
-    border-bottom: 1px solid white;
+    display: flex;
+    position: absolute;
+    padding-top: 0.25lh;
+    text-align: center;
 }
 
 .header-navigation {
+    padding: 20px 0 20px 0;
     height: fit-content;
     display: flex;
-    width: 100%;
 }
 
 .header-navigation-button {
@@ -46,4 +57,9 @@
     align-self: center;
     height: 30px;
     color: white;
+}
+
+.email-logo {
+    align-self: center;
+    height: 35px;
 }

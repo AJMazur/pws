@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import pws.common.model.PortalText;
 import pws.common.repository.PortalTextRepository;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/portaltext")
@@ -17,15 +20,14 @@ public class PortalTextRestController {
 
     private final PortalTextRepository portalTextRepository;
 
-    @GetMapping("/getPortalText/{key}")
-    public ResponseEntity<String> getPortalText(@PathVariable("key") String portalTextKey) {
+    @GetMapping("/getPortalTexts")
+    public ResponseEntity<List<PortalText>> getPortalText() throws Exception {
         try {
-            return ResponseEntity.ok(portalTextRepository.findPortalTextByKey(portalTextKey).getBody());
+            return ResponseEntity.ok(portalTextRepository.findAll());
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body(
+            throw new Exception(
                     String.format(
-                            "Unable to get a portaltext: %1$s with exception: %2$s",
-                            portalTextKey,
+                            "Unable to get a portaltext with exception: %1$s",
                             e.getMessage()
                     ));
         }
