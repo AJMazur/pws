@@ -2,15 +2,7 @@ import {useEffect, useState} from "react";
 import './App.css';
 import Header from "../header/Header";
 import axios from 'axios';
-
-// export function getPortalTexts() {
-//     return new Promise((resolve) => {
-//         resolve(fetch(`/portaltext/getPortalTexts`)
-//                 .then(response => {
-//                     return response.json()
-//                 }));
-//     })
-// }
+import Footer from "../footer/Footer";
 
 const App = () => {
 
@@ -40,6 +32,7 @@ const App = () => {
                     emailPt={portaltextsMap.get("email")}
                 />
             </header>
+            <Footer />
         </div>
 
     )
