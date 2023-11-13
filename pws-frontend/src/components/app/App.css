@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .App-header {
@@ -9,4 +10,8 @@
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }

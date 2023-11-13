@@ -63,3 +63,28 @@ textarea::-webkit-scrollbar-thumb {
     border: solid 2px transparent;
     border-radius: 10px;
 }
+
+.send-email-wrapper {
+    padding-top: 10px;
+    width: 100%;
+}
+
+.send-email-banner {
+    background-color: #e7e7e7;
+    text-align: center;
+    color: #282828;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.send-email-button {
+    float: right;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+
+    .button-label {
+        padding: 10px;
+    }
+}

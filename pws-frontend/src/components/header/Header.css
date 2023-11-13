@@ -2,10 +2,11 @@
     background-color: #282828;
 }
 
-.header-wrapper {
+div.header-wrapper {
     height: fit-content;
-    font-size: 30px;
+    font-size: calc(10px + 3vmin);
     display: flex;
+    padding-right: 0;
 }
 
 .header-title-wrapper {
@@ -18,7 +19,6 @@
 .header-title {
     display: flex;
     position: absolute;
-    padding-top: 0.25lh;
     text-align: center;
 }
 
@@ -33,7 +33,7 @@
     color: white;
     padding: 10px;
     border: none;
-    font-size: 30px;
+    font-size: calc(10px + 2vmin);
     display: flex;
     align-content: center;
     justify-content: center;
@@ -50,16 +50,48 @@
 
 .github-logo {
     align-self: center;
-    height: 30px;
+    height: calc(10px + 2vmin);
 }
 
 .linkedin-logo {
     align-self: center;
-    height: 30px;
+    height: calc(10px + 2vmin);
     color: white;
 }
 
 .email-logo {
     align-self: center;
-    height: 35px;
+    height: calc(10px + 2vmin);
+}
+
+@media (max-width: 1024px) {
+    .github-logo {
+        align-self: center;
+        height: calc(10px + 3vmin);
+    }
+
+    .linkedin-logo {
+        align-self: center;
+        height: calc(10px + 3vmin);
+        color: white;
+    }
+
+    .email-logo {
+        align-self: center;
+        height: calc(10px + 3vmin);
+    }
+}
+
+@media (max-width: 576px) {
+    div.header-wrapper {
+        width: 100%;
+    }
+
+    .header-title {
+        padding-top: 0.2lh;
+    }
+
+    .header-navigation-button {
+        padding: 10px 5px 10px 5px;
+    }
 }

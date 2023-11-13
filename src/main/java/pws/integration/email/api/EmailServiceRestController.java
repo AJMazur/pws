@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pws.integration.email.service.EmailService;
@@ -17,7 +18,7 @@ public class EmailServiceRestController {
     private final EmailService emailService;
 
     @PostMapping("/sendEmail")
-    public ResponseEntity<String> postEmail(EmailDto email) {
+    public ResponseEntity<String> postEmail(@RequestBody EmailDto email) {
         try {
             emailService.sendEmail(email);
             return ResponseEntity.ok("ok");
