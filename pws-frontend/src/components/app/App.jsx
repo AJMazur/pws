@@ -1,8 +1,9 @@
 import {useEffect, useState} from "react";
 import './App.css';
-import Header from "../header/Header";
 import axios from 'axios';
+import Header from "../header/Header";
 import Footer from "../footer/Footer";
+import Plaintext from "../plaintext/Plaintext";
 
 const App = () => {
 
@@ -13,12 +14,10 @@ const App = () => {
     useEffect(() => {
         axios.get('/portaltext/getPortalTexts')
             .then(response => setPortaltexts(response.data))
-
     }, [])
 
     useEffect(() => {
         portaltexts.map(portaltext => portaltextsMap.set(portaltext.key, portaltext.body))
-        console.log("map: ", portaltextsMap)
     }, [portaltexts]);
 
 
@@ -32,6 +31,7 @@ const App = () => {
                     emailPt={portaltextsMap.get("email")}
                 />
             </header>
+            <Plaintext />
             <Footer />
         </div>
 
