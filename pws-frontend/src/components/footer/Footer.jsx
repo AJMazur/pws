@@ -3,7 +3,14 @@ import 'bootstrap/dist/css/bootstrap-grid.rtl.css'
 import './Footer.css'
 import axios from 'axios';
 
-const Footer = () => {
+const Footer = ({
+                    titlePt,
+                    emailInputPt,
+                    subjectInputPt,
+                    msgInputPt,
+                    sendEmailBtnPt,
+                    sendEmailBannerPt
+                }) => {
 
     const [email, setEmail] = useState('');
 
@@ -25,11 +32,11 @@ const Footer = () => {
     return (
         <div id="footer" className="footer">
             <div className="offset-1 col-10 container-fluid footer-title">
-                footer title
+                {titlePt}
             </div>
             <div className="offset-2 col-8 container-fluid">
                 <div className="email-field-wrapper">
-                    <label className="field-label" htmlFor="email">email</label>
+                    <label className="field-label" htmlFor="email">{emailInputPt}</label>
                     <input
                         className="email-field"
                         type="email"
@@ -39,7 +46,7 @@ const Footer = () => {
                     />
                 </div>
                 <div className="subject-field-wrapper">
-                    <label className="field-label" htmlFor="title">subject</label>
+                    <label className="field-label" htmlFor="title">{subjectInputPt}</label>
                     <input
                         className="subject-field"
                         type="text"
@@ -49,7 +56,7 @@ const Footer = () => {
                     />
                 </div>
                 <div className="body-field-wrapper">
-                    <label className="field-label" htmlFor="body">message</label>
+                    <label className="field-label" htmlFor="body">{msgInputPt}</label>
                     <textarea
                         className="body-field"
                         id="body"
@@ -60,13 +67,13 @@ const Footer = () => {
                 <div className="send-email-wrapper">
                     {emailDelivered ?
                         <div className="send-email-banner">
-                            Email has been sent
+                            {sendEmailBannerPt}
                         </div> :
                         <button
                             className="send-email-button"
                             onClick={sendEmail}>
                             <div className='button-label'>
-                                send email
+                                {sendEmailBtnPt}
                             </div>
                         </button>
                     }

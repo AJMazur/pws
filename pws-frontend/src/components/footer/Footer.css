@@ -1,7 +1,7 @@
 .footer {
     background-color: #282828;
     color: white;
-    font-size: calc(10px + 1vmin);
+    font-size: calc(10px + 1.5vmin);
     text-align: left;
     padding-bottom: 2lh;
 }
@@ -10,6 +10,7 @@
     font-size: calc(10px + 3vmin);
     text-align: center;
     padding: 20px 0 20px 0;
+    border-top: white solid 1px;
 }
 
 

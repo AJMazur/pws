@@ -1,0 +1,40 @@
+.plaintext-wrapper {
+    color: white;
+    padding: 20px 0 20px 0;
+}
+
+.plaintext-left-side {
+    text-align: left;
+    padding-right: 35%;
+}
+
+.plaintext-right-side {
+    text-align: right;
+    padding-left: 35%;
+}
+
+.plaintext {
+    font-size: calc(10px + 1.5vmin);
+}
+
+@media (max-width: 1024px) {
+    .plaintext-left-side {
+        padding-right: 15%;
+    }
+
+    .plaintext-right-side {
+        padding-left: 15%;
+    }
+}
+
+@media (max-width: 576px) {
+    .plaintext-left-side {
+        padding-right: 0;
+        text-align: justify;
+    }
+
+    .plaintext-right-side {
+        padding-left: 0;
+        text-align: justify;
+    }
+}
