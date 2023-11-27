@@ -25,8 +25,8 @@ const Footer = ({
             emailAddress: email,
             emailTitle: subject,
             emailBody: body})
-            .then(res => setEmailDelivered(true))
-            .catch(err => setEmailDelivered(false))
+            .then(() => setEmailDelivered(true))
+            .catch(() => setEmailDelivered(false))
     }
 
     return (
